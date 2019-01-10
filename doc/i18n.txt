@@ -1,0 +1,26 @@
+
+1. Scan source code for candidates of translations.
+   (THIS WILL BE CREATING NEW LOCALE TEMPLATE FILE)
+
+   cd locale
+   ./rescan.sh tkapp
+
+2. Edit the header of translation template. (tkapp.pot)
+
+   Manually edit the file 'tkapp.pot'
+   Or use utility shell of subst.sh
+   (This shell will replace all the word specified in file subst_header.txt)
+
+   ./subst.sh tkapp
+
+3. Edit the actual translations.
+
+   ex. Copy the template to locale translation file, and edit that translation.
+   cp tkapp.pot ko/LC_MESSAGES/tkapp.po
+   vi ko/LC_MESSAGES/tkapp.po
+
+   (Make sure edit the header as needed, like 'LANGUAGE')
+
+4. Compile locale text file(*.po) to binary file(*.mo)
+
+   ./compile.sh tkapp ko

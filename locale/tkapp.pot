@@ -1,0 +1,37 @@
+# Translation template for tk-app-archetype.
+# Copyright (C) 2019 dgkim.net
+# Deokgon Kim <dgkim@dgkim.net>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"POT-Creation-Date: 2019-01-10 23:52+KST\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Deokgon Kim <dgkim@dgkim.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: ../src/tkapp/tkapp.py:16
+msgid "tkapp"
+msgstr ""
+
+#: ../src/tkapp/tkapp.py:21
+msgid "Quit"
+msgstr ""
+
+#: ../src/tkapp/tkapp.py:23
+msgid "File"
+msgstr ""
+
+#: ../src/tkapp/tkapp.py:27
+msgid "Button1"
+msgstr ""
+
+#: ../src/tkapp/tkapp.py:37
+msgid "Button1 clicked"
+msgstr ""
+

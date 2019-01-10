@@ -1,0 +1,7 @@
+SOME DESCRIPTIVE TITLE.=Translation template for tk-app-archetype.
+YEAR=2019
+ORGANIZATION=dgkim.net
+FIRST AUTHOR=Deokgon Kim
+EMAIL@ADDRESS=dgkim@dgkim.net
+PACKAGE VERSION=0.1
+FULL NAME=Deokgon Kim
