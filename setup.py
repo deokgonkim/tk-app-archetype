@@ -23,8 +23,8 @@ setup(name='TkApp',
       author_email='author@email',
       package_dir={'': 'src'},
       packages=['tkapp'],
-      data_files=[(os.path.join('share', 'locale',' ko', 'LC_MESSAGES'),
-                   os.path.join('locale', 'ko', 'LC_MESSAGES', 'tkapp.mo'))],
+      data_files=[(os.path.join('share', 'locale', 'ko', 'LC_MESSAGES'),
+                   [os.path.join('locale', 'ko', 'LC_MESSAGES', 'tkapp.mo')])],
       scripts=['post_install.py'])
 
 # usage

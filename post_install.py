@@ -30,7 +30,7 @@ pyw_executable = 'C:\\Python27\\pythonw.exe'
 script_file = '-m %s' % MODULE_NAME
 shortcut_file_name = '%s.lnk' % DISPLAY_NAME
 shortcut_path = os.path.join(get_special_folder_path('CSIDL_DESKTOPDIRECTORY',
-                             shortcut_file_name)
+                             shortcut_file_name))
 
 try:
     #help(create_shortcut)
