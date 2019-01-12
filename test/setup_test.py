@@ -23,7 +23,7 @@ def setup_logging():
 def test_log(message, level=logging.INFO, *args, **kwargs):
     curframe = inspect.currentframe()
     calframe = inspect.getouterframes(curframe, 2)
-    print('caller name:', calframe[1][3])
+    #print('caller name:', calframe[1][3])
 
     logger = logging.getLogger('test')
     message = '%s - %s' % (calframe[1][3], message)
