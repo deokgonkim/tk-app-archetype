@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Test runner program
+"""
 
 import os
 import sys
@@ -12,6 +15,6 @@ from tkapp.tkapp import main
 
 # original locale setup is done at tkapp's __init__.py
 # this will override locale directory
-gettext.install('tkapp', localedir='../locale', unicode=True)
+gettext.install('tkapp', localedir=os.path.join('..', 'locale'), unicode=True)
 
 main()
