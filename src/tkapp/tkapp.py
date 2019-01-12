@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
-'''
+"""
 The main module of tkapp.
-'''
+"""
 
 import Tkinter as tk
 import tkMessageBox
 
+
 class RootWindow(tk.Tk):
-    '''
+    """
     The main class of tkapp
-    '''
+    """
+
     def __init__(self):
         tk.Tk.__init__(self)
 
@@ -42,9 +44,11 @@ class RootWindow(tk.Tk):
         self.bind('<Control-q>', self.terminate)
         self.bind('<Control-Q>', self.terminate)
 
+
 def main():
     app = RootWindow()
     app.mainloop()
+
 
 if __name__ == '__main__':
     main()
