@@ -1,1 +1,4 @@
 .idea
+.scannerwork
+**/*.pyc
+test/test.log
