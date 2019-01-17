@@ -9,6 +9,8 @@ import logging
 import os
 import sys
 
+import Tkinter as tk
+
 from . import __name__ as app_name
 
 
@@ -111,3 +113,32 @@ class Preferences(object):
             return os.path.join(os.environ['HOME'], DATA_PATH)
         if 'USERPROFILE' in os.environ.keys():
             return os.path.join(os.environ['USERPROFILE'], DATA_PATH)
+
+
+class PreferencesController(object):
+    """Shows Preferences window"""
+
+    def __init__(self, parent):
+        self.parent = parent
+        self.window = None
+
+    def show(self, event=None):
+        self.window = self._create_window()
+
+    def clicked_ok(self, event=None):
+        self.save_preferences()
+        self.window.destroy()
+
+    def save_preferences(self):
+        print('Saving preferences')
+
+    def _create_window(self):
+        self.window = w = tk.Toplevel(self.parent)
+        w.transient(self.parent)
+        w.lbl = tk.Label(w, text=_('Preferences'))
+        w.lbl.pack(expand='yes', fill='both')
+        w.btn = tk.Button(w, text=_('Ok'))
+        w.btn.configure(command=self.clicked_ok)
+        w.btn.pack(expand='yes', fill='both')
+
+        return w

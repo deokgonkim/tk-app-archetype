@@ -6,6 +6,8 @@ The main module of tkapp.
 import Tkinter as tk
 import tkMessageBox
 
+from preferences import PreferencesController
+
 
 class RootWindow(tk.Tk):
     """
@@ -15,6 +17,8 @@ class RootWindow(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
 
+        self.preference = PreferencesController(self)
+
         self.title(_('tkapp'))
 
         self.menu = tk.Menu(self)
@@ -22,7 +26,11 @@ class RootWindow(tk.Tk):
         self.menu_file = tk.Menu(self)
         self.menu_file.add_command(label=_('Quit'), command=self.terminate, underline=0)
 
+        self.menu_option = tk.Menu(self)
+        self.menu_option.add_command(label=_('Preferences'), command=self.preference.show)
+
         self.menu.add_cascade(label=_('File'), menu=self.menu_file)
+        self.menu.add_cascade(label=_('Option'), menu=self.menu_option)
 
         self.config(menu=self.menu)
 
