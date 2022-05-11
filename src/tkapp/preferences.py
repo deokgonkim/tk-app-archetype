@@ -3,13 +3,19 @@
 Provides preferences services
 """
 
-from ConfigParser import ConfigParser
+# python2
+#from ConfigParser import ConfigParser
+# python3
+from configparser import ConfigParser
 import codecs
 import logging
 import os
 import sys
 
-import Tkinter as tk
+# python2
+# import Tkinter as tk
+# python3
+import tkinter as tk
 
 from . import __name__ as app_name
 

@@ -14,4 +14,7 @@ if sys.platform.startswith('win'):
         lang, enc = locale.getdefaultlocale()
         os.environ['LANG'] = lang
 
-gettext.install(__name__, unicode=True)
+# python2
+# gettext.install(__name__, unicode=True)
+# python3
+gettext.install(__name__)

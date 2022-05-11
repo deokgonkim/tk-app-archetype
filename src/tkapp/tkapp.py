@@ -3,10 +3,15 @@
 The main module of tkapp.
 """
 
-import Tkinter as tk
-import tkMessageBox
+# python2
+#import Tkinter as tk
+# python3
+import tkinter as tk
+# python2
+#import tkMessageBox
+from tkinter import messagebox
 
-from preferences import PreferencesController
+from .preferences import PreferencesController
 
 
 class RootWindow(tk.Tk):
@@ -44,7 +49,7 @@ class RootWindow(tk.Tk):
         self.destroy()
 
     def btn1_clicked(self):
-        tkMessageBox.showinfo(_('Button1 clicked'), _('Button1 clicked'))
+        messagebox.showinfo(_('Button1 clicked'), _('Button1 clicked'))
 
     def _event_binding(self):
         self.protocol('WM_DELETE_WINDOW', self.terminate)
